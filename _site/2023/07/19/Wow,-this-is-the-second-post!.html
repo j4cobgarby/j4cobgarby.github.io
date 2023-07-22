@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+        <title>Jacob Garby - Wow, this is the second post!</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+
+    <body>
+        <h1 class="bigtitle">Jacob's Website</h1>
+        <div class="nav">
+            <a  class="sitelink" href="/">Blog Listing</a>
+            <a  class="sitelink" href="/about_contact.html">About/Contact Me</a>
+            <a  class="sitelink" href="/projects.html">Projects</a>
+            <a  class="sitelink" href="/misc.html">Miscellaneous</a>
+            <a class="sitelink" href="/assets/pdf/CV.pdf">CV</a>
+        </div>
+        <div class="content">
+            <a class="sitelink sel" href="/index.html">&#8592; Back to blog listing</a>
+
+<h1>Wow, this is the second post!</h1>
+<p style="text-align: center;"><i>Written 19 Jul 2023 by jacob</i></p>
+<p>Lorem ipsum this is some random text. Will it be before or after the first post? Who knows?</p>
+
+<p>Also, here’s some code;</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">find_free_frames</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">limine_memmap_response</span> <span class="o">*</span><span class="n">resp</span> <span class="o">=</span> <span class="n">memmap_request</span><span class="p">.</span><span class="n">response</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">resp</span><span class="o">-&gt;</span><span class="n">entry_count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">limine_memmap_entry</span> <span class="o">*</span><span class="n">entry</span> <span class="o">=</span> <span class="n">resp</span><span class="o">-&gt;</span><span class="n">entries</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">entry</span><span class="o">-&gt;</span><span class="n">type</span> <span class="o">==</span> <span class="n">LIMINE_MEMMAP_USABLE</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">b_offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b_offset</span> <span class="o">&lt;</span> <span class="n">entry</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">;</span> <span class="n">b_offset</span> <span class="o">+=</span> <span class="mi">4096</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">struct</span> <span class="n">frame_marker</span> <span class="o">*</span><span class="n">new_block</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">frame_marker</span><span class="o">*</span><span class="p">)(</span><span class="n">entry</span><span class="o">-&gt;</span><span class="n">base</span> <span class="o">+</span> <span class="n">b_offset</span><span class="p">);</span>
+
+                <span class="c1">// Put the metadata in the new block, saying where the next block in the linked</span>
+                <span class="c1">// list is located.</span>
+                <span class="n">new_block</span><span class="o">-&gt;</span><span class="n">next_frame</span> <span class="o">=</span> <span class="n">first_page_frame</span><span class="p">;</span>
+
+                <span class="c1">// Make the linked list start at the new block.</span>
+                <span class="n">first_page_frame</span> <span class="o">=</span> <span class="n">new_block</span><span class="p">;</span>
+
+                <span class="n">ret</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><em>Fig 1: Some code.</em></p>
+
+<p>Back to normal text.</p>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+@import url('/assets/css/highlight.css');
+
+body {
+    background-color: #90c881;
+    font-family: 'Libre Baskerville', serif;
+    padding: 20px;
+    font-size: smaller;
+
+    background-image: radial-gradient(#57844b 13%, transparent 13%),
+        radial-gradient(#57844b 13%, transparent 13%);
+    background-position: 0 0, 7.5px 7.5px;
+    background-size: 15px 15px;
+}
+
+div {
+    border-radius: 2px;
+}
+
+h1 {
+    margin-top: 0px;
+    text-align: center;
+}
+
+h1.bigtitle {
+    margin: auto;
+    max-width: 800px;
+    display: block;
+
+    text-align: right;
+    font-size: 40pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    color: white;
+
+    -webkit-text-stroke: 0.6px black;
+
+    text-shadow: 5px 0 #90c881, -5px 0 #90c881, 0 5px #90c881, 0 -5px #90c881,
+             1px 1px #90c881, -1px -1px #90c881, 1px -1px #90c881, -1px 1px #90c881;
+}
+
+div.nav {
+    display: block;
+    
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 850px;
+
+    text-align: right;
+}
+
+a {
+    color: green;
+}
+
+a.sitelink {
+    margin: 5px;
+    margin-left: 0;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    
+    color: #a065bf;
+    background-color: white;
+    
+    padding: 2px 4px 2px 4px;
+    border-radius: 2.5px;
+    border: 0.5px solid black;
+}
+
+a.sitelink.sel {
+    color: green;
+}
+
+a.sitelink:hover {
+    color: white;
+    background-color: #a065bf;
+    box-shadow: 0px 0px 2px #a065bf;
+}
+
+a.sitelink.sel:hover {
+    color: white;
+    background-color: green;
+    box-shadow: 0px 0px 2px green;
+}
+
+div.content {
+    display: block;
+    background-color: white;
+
+    border: 1px solid black;
+    box-shadow: 0px 6px 0 0 black;
+    border-radius: 2pt;
+
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+pre.highlight {
+    border-left: 1.5px solid black;
+    border-left-style: dashed;
+    padding-left: 10px;
+    overflow: scroll;
+}
+
+code {
+    font-family: 'IBM Plex Mono';
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+li:last-child {
+    border-bottom: none;
+}

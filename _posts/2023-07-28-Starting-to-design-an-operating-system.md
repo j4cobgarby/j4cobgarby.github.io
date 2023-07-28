@@ -1,0 +1,21 @@
+# Starting to Design an Operating System
+
+Making an operating system is a project I've been vaguely looking at for a while now, and I've given it a few attempts. Each time, my code ends up getting really disorganised and difficult to add new features. This time, I'm going to thoroughly plan out as much as possible before starting any significant programming.
+
+First though, I'll give some brief overviews of some concepts.
+
+## What is an operating system, and what does it consist of?
+
+An operating system can be simply thought of as a collection of software that allows applications to run on a computer. This usually consists of:
+
+ - Some way for applications to access hardware devices (such as keyboards, mice, network interfaces, storage devices, etc.,)
+ - A filesystem that applications can use to persistently store data, and share that data so that it can be accessed from other applications.
+ - A system that facilitates a large number of applications running at the same time on the computer, managing various resources.
+
+Generally, these features are _architecture independent_, meaning that the same operating system could run on two different computers with very different architectures. Common architectures today include x86-64, which is used by modern Intel and AMD CPUs; ARM, a family of CPU architectures including those used by the most recent Apple computers, as well as a lot of embedded computers like Raspberry Pis; and RISC-V, which is far newer than the other two, and at the moment is mostly used for some embedded systems. All of these architectures do things in quite different ways. For one, they all use different instruction sets, so a program compiled to run on an ARM machine would not work whatsoever if executed directly on an x86 machine, for instance. There are more subtle differences too, for example the way they handle interrupts, the mechanisms they use to manage memory, and the way they provide low level access to hardware, to name a few.
+
+A programmer wants their programs to be able to run on as many different computers as possible, to make sure that their effort programming them was as worthwhile as possible. Compilers help with this, allowing them to write their code in a high level language (like C or Rust), _compiling_ it into machine-readable code that can be understood by any specific type of CPU they want. This doesn't completely solve the problem though, as even though they can run their code on any of these processors, the specific semantics of each architecture means that a given task (like waiting for a keyboard key to be pressed) may have to be implemented in completely different ways. 
+
+At this point, you might question why a compiler cannot take this into account when compiling. After all, it knows what architecture the code is being compiled to. If, in the high level language, a programmer wanted to read a keyboard press, why could the compiler not understand this and produce some architecture-specific machine code which performs this action? Well, it's because the CPU architecture doesn't specify what hardware is attached to a given system, or how it's connected. It simply can't, because it would be inconvenient to update the architecture specification whenever a new piece of hardware is released.
+
+This is where the operating system comes in. It provides an architecture-specific _layer_ which provides functionality for applications to interact with generic _classes_ of hardware. For example, an application running on top of an operating system is able to send a piece of data out to the internet without knowing the specific model of network interface card installed on the computer. The programmers of the operating system still need to write a seperate implementation for each type of network interface card they want to support, which takes a lot of work, but this work then only needs to be done once, not again and again whenever a new programmer wants to use that piece of hardware. Furthermore, since the machine code required to use specific hardware is implemented within the operating system (rather than at compile time), the program does not need to be recompiled to support newly released hardware.

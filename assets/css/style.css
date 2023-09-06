@@ -6,8 +6,6 @@ body {
     padding: 20px;
     font-size: smaller;
 
-    background-image: radial-gradient(#57844b 13%, transparent 13%),
-        radial-gradient(#57844b 13%, transparent 13%);
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
 }
@@ -29,10 +27,7 @@ h1.bigtitle {
 
     color: white;
 
-    -webkit-text-stroke: 0.5pt black;
-
-    text-shadow: 5px 0 #90c881, -5px 0 #90c881, 0 5px #90c881, 0 -5px #90c881,
-             1px 1px #90c881, -1px -1px #90c881, 1px -1px #90c881, -1px 1px #90c881;
+    -webkit-text-stroke: 1pt black;
 }
 
 div.nav {
@@ -63,7 +58,7 @@ a.sitelink {
     
     padding: 2px 4px 2px 4px;
     border-radius: 2pt;
-    border: 0.5pt solid black;
+    border: 1pt solid black;
 }
 
 a.sitelink.sel {
@@ -84,14 +79,15 @@ div.content {
     display: block;
     background-color: white;
 
-    border: 1.5pt solid black;
-    box-shadow: 0 5pt 0 0 black;
-    border-radius: 3pt;
+    border: 1pt solid black;
+    box-shadow: 0 3pt 0 0 black;
+    border-radius: 2pt;
 
     margin: auto;
     max-width: 900px;
-    padding: 20px;
+    padding: 50px;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 pre.highlight {
@@ -103,21 +99,22 @@ pre.highlight {
 
 code {
     font-family: 'IBM Plex Mono';
+    font-size: 9pt;
 }
 
-ul {
+ul.post_list {
     list-style: none;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-li {
+li.post_list {
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 1pt solid grey;
 }
 
-li:last-child {
+li.post_list:last-child {
     border-bottom: none;
 }
 

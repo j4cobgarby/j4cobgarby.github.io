@@ -5,6 +5,7 @@ title: Contact Me
 
 # Contact Me!
 
- - **Discord:** @j4cobgarby
- - **Email:** [j4cobgarby@gmail.com](mailto:j4cobgarby@gmail.com)
- - **LinkedIn:** [Jacob Garby](https://www.linkedin.com/in/j4cobgarby/)
+You're welcome to contact me about more or less anything (unless you're a robot). However, it's not uncommon that I'll see an email, plan on replying to it later, and then entirely forget about it -- if that happens, feel free to try again :)
+
+ - Email: `j4cobgarby --at-- gmail.com`
+

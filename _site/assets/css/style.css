@@ -1,33 +1,35 @@
 @import url('/assets/css/highlight.css');
 
 body {
-    background-color: #90c881;
-    font-family: 'Libre Baskerville', serif;
-    padding: 20px;
+    background-color: #c6cfef;
+    font-family: 'Inter', sans-serif;
     font-size: smaller;
+    padding: 0;
+    padding-bottom: 50px;
+    margin: 0;
 
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
+
+    hyphens: auto;
+    text-align: left;
 }
 
 h1 {
     margin-top: 0px;
-    text-align: center;
+    text-align: left;
 }
 
 h1.bigtitle {
     margin: auto;
-    max-width: 800px;
-    display: block;
 
-    text-align: right;
-    font-size: 40pt;
+    text-align: center;
+    font-size: 25pt;
     font-weight: bold;
     margin-bottom: 10pt;
 
-    color: white;
+    color: black;
 
-    -webkit-text-stroke: 1pt black;
 }
 
 div.nav {
@@ -44,50 +46,36 @@ div.nav {
 
 a {
     color: green;
-}
-
-a.sitelink {
-    margin: 5px;
-    margin-left: 0;
-    font-weight: bold;
-    font-style: normal;
     text-decoration: none;
-    
-    color: #a065bf;
-    background-color: white;
-    
-    padding: 2px 4px 2px 4px;
-    border-radius: 2pt;
-    border: 1pt solid black;
 }
 
-a.sitelink.sel {
-    color: green;
+a:hover {
+    text-decoration: underline;
 }
 
-a.sitelink:hover {
-    color: white;
-    background-color: #a065bf;
-}
-
-a.sitelink.sel:hover {
-    color: white;
-    background-color: green;
+div.sidebar {
+    height: 100%;
+    width: 250px;
+    border-right: 2px solid black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ead793;
+    overflow-x: hidden;
+    padding: 10px;
+    padding-top: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 div.content {
-    display: block;
-    background-color: white;
-
-    border: 1pt solid black;
-    box-shadow: 0 3pt 0 0 black;
-    border-radius: 2pt;
-
-    margin: auto;
-    max-width: 900px;
-    padding: 50px;
-    box-sizing: border-box;
-    text-align: justify;
+    margin: 0;
+    margin-left: 250px;
+    padding: 20px 20px;
+    background-color: #faf3e1;
+    border-bottom: 2px solid blue;
 }
 
 pre.highlight {
@@ -98,8 +86,12 @@ pre.highlight {
 }
 
 code {
-    font-family: 'IBM Plex Mono';
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9pt;
+}
+
+ul {
+    padding-left: 30px;
 }
 
 ul.post_list {
@@ -123,13 +115,21 @@ li.post_list:last-child {
 
 hr {
     border: none;
-    border-top: 1pt dashed black;
+    border-top: 1pt solid black;
 }
 
 img {
     max-width: 40%;
     display: inline-block;
     margin: 5px;
+}
+
+img.icon {
+    float: left;
+    margin: 0;
+    margin-right: 10px;
+    width: 75px;
+    border: 1px solid white;
 }
 
 img + img, img:has(+ img) {

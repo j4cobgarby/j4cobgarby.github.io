@@ -3,7 +3,7 @@ layout: post
 author: Jacob Garby
 ---
 
-Making an operating system is a project I've been looking at for a while now, and I've given it a few attempts. This is the first in a series of posts about how I'm making a new one, from scratch.
+Making an operating system is a project I've been looking at for a while now, and I've given it a few attempts. This is the first in a series of posts about how I'm making a new one, from scratch. In this post I'm 
 
 ## What is an operating system for?
 
@@ -158,5 +158,7 @@ The filesystem's `read()` function is responsible for taking raw data from the d
 A block device is a data storage device which can present data in fixed size blocks. This is true of all mass storage devices, like hard drives, SSDs, flash drives, etc. Each type of drive (or equivalently, each different drive interface type) has its own driver code, either as an integrated part of Linux, or as a module loaded on top.
 
 Now, at the lowest level, the required blocks of raw data are read from the correct disk (if the data is not already cached in memory). The filesystem code then interprets this data as needed, and fills a kernel buffer with a sequence of bytes from the file. The kernel can then write the data from this buffer to the userspace buffer provided in the read syscall parameter.
+
+The operation of the `write()` syscall works in a similar way to the `read()` syscall. Hopefully this brief overview gives you some idea of how the operating system is useful: it allows programs to interact with hardware in a structured and uniform way, while also limiting that which they access.
 
 [^1]: _Usually_ raw data from a disk, but depending on the filesystem it could also be data read over the internet (for example sshfs), or data entirely fabricated in software (for example sysfs)

@@ -109,9 +109,12 @@ ul.post_list {
 }
 
 li.post_list {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     border-bottom: 1pt solid grey;
+}
+
+li.post_list:hover {
+    background-color: rgba(0, 0, 0, 0.091);
 }
 
 li.post_list:last-child {
@@ -122,3 +125,18 @@ hr {
     border: none;
     border-top: 1pt dashed black;
 }
+
+img {
+    max-width: 40%;
+    display: inline-block;
+    margin: 5px;
+}
+
+img + img, img:has(+ img) {
+    max-width: 30%;
+}
+
+p:has(> img) {
+    text-align: center;
+}
+

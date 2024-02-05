@@ -1,4 +1,7 @@
 <div class="card">
-    <h2>{{page.title}}</h2>
-    {{page.subtitle}}
+    <a href="{{page.link}}"><h2>{{page.title}}</h2></a>
+    <h3>{{page.subtitle}}</h3>
+    <span class="date">{{page.date | date_to_string}}</span>
+    <img alt="Image of {{page.title}}" src="{{page.imgpath}}" class="cardbanner">
+    {{content}}
 </div>

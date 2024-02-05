@@ -55,7 +55,7 @@ a:hover {
 
 div.sidebar {
     height: 100%;
-    width: 250px;
+    width: 290px;
     border-right: 2px solid black;
     position: fixed;
     z-index: 1;

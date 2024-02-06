@@ -1,4 +1,9 @@
-@import url('/assets/css/highlight.css');
+@font-face {
+    font-family: "Inter";
+    src:
+        Local("Inter"),
+        url("/assets/fonts/Inter_var.ttf") format("truetype");
+}
 
 html, body {
     height: 100%;
@@ -21,6 +26,7 @@ body {
 h1 {
     margin-top: 0px;
     text-align: left;
+    font-weight: 900;
 }
 
 h1.bigtitle {
@@ -28,7 +34,6 @@ h1.bigtitle {
 
     text-align: center;
     font-size: 25pt;
-    font-weight: 900;
     margin-bottom: 20pt;
 
     color: black;

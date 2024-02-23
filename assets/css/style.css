@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-color: #c6cfef;
+    background-color: black;
     font-family: 'Inter', sans-serif;
     font-size: smaller;
     padding: 0;
@@ -81,7 +81,7 @@ div.sidebar {
 
 div.content {
     padding: 50px;
-    background-color: wheat;
+    background-color: papayawhip;
     border-left: 1px solid black;
     box-sizing: border-box;
 
@@ -152,7 +152,7 @@ img.icon {
     margin: 0;
     margin-right: 10px;
     width: 110px;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 /* uhhh, i think this was so that when there are three images in a row they

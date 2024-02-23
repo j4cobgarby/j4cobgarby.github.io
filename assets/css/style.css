@@ -63,7 +63,8 @@ a:hover {
 
 div.sidebar {
     z-index: 1;
-    background: linear-gradient(180deg, royalblue 0%, white 75px, burlywood 79px);
+    /* background: linear-gradient(180deg, royalblue 0%, white 75px, burlywood 79px); */
+    background: burlywood;
     overflow-x: hidden;
 
     padding: 10px;
@@ -81,7 +82,7 @@ div.sidebar {
 div.content {
     padding: 50px;
     background-color: wheat;
-    border-left: 3px solid royalblue;
+    border-left: 1px solid black;
     box-sizing: border-box;
 
     flex: 1;
@@ -151,7 +152,7 @@ img.icon {
     margin: 0;
     margin-right: 10px;
     width: 110px;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 /* uhhh, i think this was so that when there are three images in a row they

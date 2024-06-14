@@ -238,9 +238,10 @@ div.card > h2, div.card > h3 {
 }
 
 
-@media (max-width: 800px) {
+@media (max-device-width: 800px) {
     body {
         text-align: justify;
+        font-size: 25pt;
     }
 
     div.container {

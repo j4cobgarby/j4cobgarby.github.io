@@ -65,7 +65,7 @@ div.sidebar > ul > li > a {
 div.sidebar {
     z-index: 1;
      /*background: linear-gradient(180deg, royalblue 0%, white 75px, burlywood 79px); */
-    background: #fff79c;
+    background: #fcf2a4;
     overflow-x: hidden;
     height: fit-content;
 
@@ -77,19 +77,55 @@ div.sidebar {
 
     width: 350px;
 
-    border: 1px solid brown;
+    border: 2px solid brown;
     border-radius: 4px;
 
     margin: 10px;
 }
 
+div.sidebar.hidden {
+    display: none;
+}
+
+div.stickybox {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    color: grey;
+    background-color: white;
+}
+
+div.stickybox.sticking {
+    border: 1px solid grey;
+    border-radius: 5px;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+div.stickybox a, div.stickybox button.sidebar_btn, div.stickybox span {
+    font-size: 9pt;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+button.sidebar_btn { 
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: grey;
+    text-decoration: underline;
+}
+
 div.content {
     padding: 50px;
-    padding-left: 15px;
+    /*padding-left: 15px;*/
     padding-top: 30px;
     background-color: white;
     box-sizing: border-box;
-    border-left: 1px solid brown;
+    border: 2px solid brown;
+    border-top: none;
 
     flex: 1;
     height: fit-content;

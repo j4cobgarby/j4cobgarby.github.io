@@ -9,14 +9,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
 
-        <script>
-            function hide_sidebar() {
-                document.getElementById("sidebar").setAttribute("hidden", true);
-            }
+        <script src="/assets/js/sidebar.js">
+            
         </script>
     </head>
 
-    <body lang="en-GB">
+    <body lang="en-GB" onload="init();">
         <div class="container">
         <div id="sidebar" class="sidebar">
             <h1
@@ -45,9 +43,16 @@
             </p>
             <p>
             If you want, you can contact me at: <pre>j4cobgarby --at-- gmail.com</pre>
-            </p>
+            </button>
         </div>
         <div class="content">
+        <div class="stickybox">
+            <a class="" href="/">All Posts</a>
+            <span>&#128949;</span>
+            <button id="sidebar-toggle" class="sidebar_btn" onclick="toggle_sidebar();">Hide sidebar (need js)</button>
+            <span>&#128949;</span>
+            <span>{{page.title}}</span>
+        </div>
         <div class="contentInner">
             {{ content }}
         </div>

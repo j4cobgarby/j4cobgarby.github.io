@@ -129,6 +129,12 @@ div.content {
 
     flex: 1;
     height: fit-content;
+
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 div.contentInner {
@@ -296,5 +302,9 @@ div.card > h2, div.card > h3 {
 
     div.card {
         padding: 5%;
+    }
+   
+    div.stickybox a, div.stickybox button.sidebar_btn, div.stickybox span {
+        font-size: 25pt;
     }
 }

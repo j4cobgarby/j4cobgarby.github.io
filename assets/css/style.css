@@ -10,7 +10,6 @@ html, body {
 }
 
 body {
-    /* background-color: #cbb5a6; */
     background-color: #628c57;
     color: black;
     font-family: 'Inter', sans-serif;
@@ -94,6 +93,7 @@ div.stickybox {
     width: 100%;
     color: grey;
     background-color: white;
+    padding: 10px;
 }
 
 div.stickybox.sticking {
@@ -275,9 +275,9 @@ div.card > h2, div.card > h3 {
         margin: auto;
 
         text-align: center;
-        font-size: 30pt;
+        font-size: 35pt;
         margin-bottom: 0;
-        margin-top: 2%;
+        margin-top: 0;
 
         cursor: default;
     }
@@ -286,6 +286,8 @@ div.card > h2, div.card > h3 {
         display: flex;
         list-style: none;
         justify-content: space-around;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     div.content {
@@ -305,7 +307,11 @@ div.card > h2, div.card > h3 {
         padding: 5%;
     }
    
-    div.stickybox a, div.stickybox button.sidebar_btn, div.stickybox span {
-        font-size: 25pt;
+    div.stickybox > * {
+        font-size: 25pt !important;
+    }
+
+    .hide_on_mobile {
+        display: none;
     }
 }

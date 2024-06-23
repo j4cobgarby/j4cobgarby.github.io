@@ -10,7 +10,8 @@ html, body {
 }
 
 body {
-    background-color: #cbb5a6;
+    /* background-color: #cbb5a6; */
+    background-color: #628c57;
     color: black;
     font-family: 'Inter', sans-serif;
     padding: 0;

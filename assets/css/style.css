@@ -39,6 +39,11 @@ h1.bigtitle {
     cursor: default;
 }
 
+h4 {
+    margin: 0;
+    text-align: center;
+}
+
 div.nav {
     display: block;
     

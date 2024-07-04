@@ -3,10 +3,4 @@
 # html using jekyll. It then copies this to a place where Caddy will serve files
 # from.
 
-git pull
-jekyll build
-echo "Cleaning /var/www/html"
-sudo rm -rf /var/www/html/*
-echo "Copying files"
-sudo cp -r ./_site/* /var/www/html/
-echo "All done"
+git pull && jekyll build -d /var/www/html

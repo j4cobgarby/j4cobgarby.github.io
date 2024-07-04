@@ -73,8 +73,7 @@ div.sidebar {
     overflow-x: hidden;
     height: fit-content;
 
-    padding: 10px;
-    padding-top: 20px;
+    padding: 20px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
@@ -84,7 +83,7 @@ div.sidebar {
     border: 2px solid brown;
     border-radius: 4px;
 
-    margin: 10px;
+    margin: 5px;
 }
 
 div.sidebar.hidden {
@@ -94,18 +93,16 @@ div.sidebar.hidden {
 div.stickybox {
     position: sticky;
     top: 0px;
-    width: 100%;
+    width: fit-content;
+    margin: auto;
     color: grey;
     background-color: white;
-    padding: 10px;
+    padding: 3px;
 }
 
 div.stickybox.sticking {
-    /* border: 1px solid grey; */
-    border-radius: 5px;
+    border: 1px solid lightgrey; 
     border-top: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
 div.stickybox a, div.stickybox button.sidebar_btn, div.stickybox span {
@@ -124,8 +121,8 @@ button.sidebar_btn {
 }
 
 div.content {
-    padding: 50px;
-    padding-top: 30px;
+    padding: 20px;
+    /*padding-top: 30px;*/
     background-color: white;
     box-sizing: border-box;
     border: 2px solid brown;
@@ -134,7 +131,7 @@ div.content {
     flex: 1;
     height: fit-content;
 
-    margin: 10px;
+    margin: 5px;
 }
 
 div.contentInner {

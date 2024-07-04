@@ -10,4 +10,4 @@ If I'm writing some code for Linux (or other UNIXy systems) and I want to alloca
  2) Keeping track of the length of allocated regions, to allow `free(...)` to function.
  3) Organising the allocations in an optimal way, that reduces the amount of _fragmentation_.
 
-Unfortunately, I'm working on implementing [my own operating system](https://github.com/j4cobgarby/fors-kernel)
+So yeah, usually these problems have already been solved by someone else (e.g. whoever wrote the kernel/C library you're using), but for some reason I'm working on implementing [my own operating system](https://github.com/j4cobgarby/fors-kernel) from scratch, which means that I need to figure out a way to do this myself.

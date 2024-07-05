@@ -64,7 +64,8 @@ a:hover {
     color: #265aad;
 }
 
-div.sidebar > ul > li > a {
+div.sidebar li {
+    margin-bottom: 5px;
 }
 
 div.sidebar {

@@ -54,7 +54,7 @@ to the left hand side of the dealer.
         - i.e., sequences of pickup cards are only effective as the end of a
             turn.
  5. You may now play 0 or more cards of the same _value_ as the card played in
-    step 2, on top of `buffer`.
+    step 4, on top of `buffer`.
     - If a card is played that isn't a 2 or a Jack, set `pickup` := 0 at that
         moment.
  6. If any cards were played in step 5, then goto step 4.

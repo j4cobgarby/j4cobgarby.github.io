@@ -25,11 +25,12 @@ up cards.
 
 Each player is dealt cards from a shuffled deck, until there are no cards left.
 
-An arbitrary player goes first.
+An arbitrary player goes first. It doesn't matter at all, but it's common to pick whoever is
+to the left hand side of the dealer.
 
-Let `pickup` be a global variable := 0
-Let `discard` be an empty pile of cards
-Let `move offset` := 1
+ - Let `pickup` be a global variable := 0
+ - Let `discard` be an empty pile of cards
+ - Let `move offset` := 1
 
 ## General Structure of a Turn
 

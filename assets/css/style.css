@@ -282,7 +282,8 @@ div.card > h2, div.card > h3 {
     }
 
     div.sidebar > ul {
-        display: flex;
+	/* will still be display: none for now... */
+        /*display: flex;*/
         list-style: none;
         justify-content: space-around;
         margin-top: 5px;

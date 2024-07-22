@@ -10,7 +10,9 @@ I'm not sure where the game came from originally -- probably it was based on som
 of our own rules to it over time. I think it's a little like Uno, conceptually, although I've never played Uno.
 
 I've tried to write the rules in an unambiguous format, a little like pseudocode. I couldn't think of a simpler
-structure to explain the rules. The _Setup_ section makes several definitions.
+structure to explain the rules. The _Setup_ section makes several definitions, and then you simply have
+to understand the structure in the following section, in addition to the effects and conditions of a handful of
+special Power Cards.
 
 ## Brief Overview
 

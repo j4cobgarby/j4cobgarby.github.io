@@ -14,7 +14,7 @@
         </script>
     </head>
 
-    <body lang="en-GB" onload="init();">
+    <body lang="en-GB">
         <div class="container">
         <div id="sidebar" class="sidebar">
             <h1
@@ -51,6 +51,9 @@
             <a class="" href="/">All Posts</a>
             <span class="divider">-</span>
             <button id="sidebar-toggle" class="sidebar_btn hide_on_mobile" onclick="toggle_sidebar();">Hide sidebar (need js)</button>
+            <script>
+                init();
+            </script>
             <span class="divider hide_on_mobile">-</span>
             <span>{{page.title}}</span>
         </div>

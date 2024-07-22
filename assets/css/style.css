@@ -11,7 +11,7 @@ html, body {
 
 body {
     background-color: #628c57;
-    color: black;
+    color: #5e1717;
     font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
@@ -69,7 +69,8 @@ div.sidebar > ul > li > a {
 
 div.sidebar {
     z-index: 1;
-    background: #fcf2a4;
+    /* background: #fcf2a4; */
+    background: #f0edc2;
     overflow-x: hidden;
     height: fit-content;
 
@@ -232,7 +233,7 @@ div.cardContainer {
 }
 
 div.card {
-    border: 2px solid #9aaab3;
+    border: 2px solid #d78181;
     background-color: #f7f7f7;
     padding: 15px;
     padding-top: 0;

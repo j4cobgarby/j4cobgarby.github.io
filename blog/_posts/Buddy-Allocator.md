@@ -4,10 +4,10 @@ author: Jacob Garby
 title: Implementing a Memory Allocator for My Own Operating System
 ---
 
-For an operating system kernel I'm working on ([on Github here](https://github.com/j4cobgarby/fors-kernel)), I needed to implement a memory allocator for the kernel's heap. In this context, I might mean three different things by a memory allocator:
+If I'm writing some code for Linux (or other UNIXy systems) and I want to allocate a piece of memory at runtime, we all know that I can just use `malloc(n)`, along with `free(...)` to release the allocation. This neatly solves several problems for us, which can be a headache to implement from scratch:
 
- - Allocating page frames
- - Allocating virtual pages
- - Efficiently splitting up pages into smaller chunks
+ 1) Dividing up the unstructured memory regions that the OS gives us into smaller sections.
+ 2) Keeping track of the length of allocated regions, to allow `free(...)` to function.
+ 3) Organising the allocations in an optimal way, that reduces the amount of _fragmentation_.
 
-I'm mainly concerned with the third of these in this article; the other two are quite a lot simpler in my opinion, but do still have interesting complications, so I may well write about those at some later point. For now, I'll assume that the first two are already solved, which means that we can on demand allocate 4KB blocks of memory.
+So yeah, usually these problems have already been solved by someone else (e.g. whoever wrote the kernel/C library you're using), but for some reason I'm working on implementing [my own operating system](https://github.com/j4cobgarby/fors-kernel) from scratch, which means that I need to figure out a way to do this myself.

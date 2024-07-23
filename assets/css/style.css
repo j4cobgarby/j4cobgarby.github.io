@@ -240,13 +240,15 @@ div.card > h2, div.card > h3 {
 @media (max-width: 1000px) {
     body {
         text-align: justify;
+        margin: 4px;
     }
 
     div.container {
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
     }
 
     div.sidebar, div.content {

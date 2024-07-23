@@ -150,7 +150,7 @@ pre.highlight {
     border-radius: 5px;
     background-color: #faf9f2;
     color: black;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 code {

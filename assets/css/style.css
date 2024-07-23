@@ -151,7 +151,6 @@ pre.highlight {
     background-color: #faf9f2;
     color: black;
     overflow-x: scroll;
-    max-width: 80%;
 }
 
 code {

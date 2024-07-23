@@ -13,8 +13,7 @@ body {
     background-color: #628c57;
     color: #5e1717;
     font-family: 'Inter', sans-serif;
-    padding: 0;
-    margin: 0;
+    font-size: 12px;
 
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
@@ -24,6 +23,7 @@ body {
 }
 
 h1 {
+    font-size: 20pt;
     margin-top: 10px;
     text-align: left;
     font-weight: 900;
@@ -33,7 +33,6 @@ h1.bigtitle {
     margin: auto;
 
     text-align: center;
-    font-size: 25pt;
     margin-bottom: 20pt;
 
     cursor: default;
@@ -69,8 +68,6 @@ div.sidebar li {
 }
 
 div.sidebar {
-    z-index: 1;
-    /* background: #fcf2a4; */
     background: #f0edc2;
     overflow-x: hidden;
     height: fit-content;
@@ -80,12 +77,10 @@ div.sidebar {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 
-    width: 350px;
+    flex: 0 0 300px;
 
     border: 2px solid brown;
     border-radius: 4px;
-
-    margin: 5px;
 }
 
 div.sidebar.hidden {
@@ -123,17 +118,16 @@ button.sidebar_btn {
 }
 
 div.content {
+    flex: 1;
+    max-width: 1000px;
+    width: 60%;
     padding: 20px;
-    /*padding-top: 30px;*/
     background-color: white;
     box-sizing: border-box;
     border: 2px solid brown;
     border-radius: 4px;
 
-    flex: 1;
     height: fit-content;
-
-    margin: 5px;
 }
 
 div.contentInner {
@@ -142,9 +136,11 @@ div.contentInner {
 
 div.container {
     display: flex;
-    margin: auto;
-    max-width: 1300px;
-    padding: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
 }
 
 div.footer {
@@ -158,12 +154,13 @@ pre.highlight {
     border-radius: 5px;
     background-color: #faf9f2;
     color: black;
-    overflow: scroll;
+    overflow-x: scroll;
+    max-width: 80%;
 }
 
 code {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 9pt;
+    font-size: 14px;
 }
 
 ul {
@@ -195,7 +192,7 @@ hr {
 }
 
 p > img {
-    max-width: 40%;
+    max-height: 300px;
     display: inline-block;
     margin: 5px;
 }
@@ -244,58 +241,40 @@ div.card > h2, div.card > h3 {
 }
 
 
-@media (max-device-width: 800px) {
+@media (max-width: 950px) {
     body {
         text-align: justify;
-        font-size: 25pt;
     }
 
     div.container {
         flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin: 0;
+    }
+
+    div.sidebar, div.content {
+      min-width: unset;
+      max-width: 100%;
+      width: 100%;
+      border: none;
+      border-radius: 0;
     }
 
     div.sidebar {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        margin: auto;
-        background: #fff79c;
-        flex-shrink: 0;
-        padding-left: 5%;
-        padding-right: 5%;
+      flex: unset;
+      text-align: center;
+      padding-bottom: 0;
     }
 
-    div.sidebar > * {
-        display: none;
+    div.sidebar li, div.sidebar ul {
+      display: inline;
+      padding: 5px;
+      line-height: 200%;
     }
 
-    div.sidebar > h1 {
-        display: block;
-        margin: auto;
-
-        text-align: center;
-        font-size: 35pt;
-        margin-bottom: 0;
-        margin-top: 0;
-
-        cursor: default;
-    }
-
-    div.sidebar > ul {
-	/* will still be display: none for now... */
-        /*display: flex;*/
-        list-style: none;
-        justify-content: space-around;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    div.content {
-        padding: 30px;
-    }
-
-    code {
-        font-size: 12pt;
+    div.sidebar ul {
+      padding-left: 0;
     }
 
     div.cardContainer {
@@ -308,7 +287,7 @@ div.card > h2, div.card > h3 {
     }
    
     div.stickybox > * {
-        font-size: 25pt !important;
+        font-size: 10px;
     }
 
     .hide_on_mobile {

@@ -124,8 +124,8 @@ Still, there could be a situation where a player must pick up more cards than
 are in the deck _and_ that are available to move into the deck from the
 `discard` pile. In this case, you can either:
 
- 1) Pick up as many cards as possible, exhausting the deck and `discard`, or
- 2) Do as in option 1, but remember how many cards you still need "in debt",
+ 1. Pick up as many cards as possible, exhausting the deck and `discard`, or
+ 2. Do as in option 1, but remember how many cards you still need "in debt",
     and pick them up as and when they become available.
 
 I can't remember which option we used when we played. Probably 1, since 2
@@ -160,3 +160,17 @@ Example 7. <pick up three cards from deck> ....... due to not having any cards t
 Example 8. Ac            ......................... Ace cancels pick-up, and player now chooses next suit freely
 Example 9. Jc            ......................... Pick-up avoids pick-up, and `pickup` now = 8 for the next person!
 ```
+
+Here's an example of a particularly long turn.
+
+```
+Example 10. Ks Kc 6c 6h 6d 6s Qs 8h 8d 3d 4d 4h As Ac Ad Ah Jh Jd Jc Js
+```
+
+To clarify some points about example 10:
+
+ - Two kings are played at first. This switches next-turn direction twice, so it's unchanged.
+ - Two 8's are played, thereby skipping the next two players. This takes effect after this turn.
+ - Four Jacks are played at the end, forcing the next player whose turn it is to pick up 3+3+5+5=16
+    cards if they're unable to cancel it with Aces (which they can't, since all the Aces were played
+    in this turn), and unable to add to the pick-up with at least a 2 of spades.

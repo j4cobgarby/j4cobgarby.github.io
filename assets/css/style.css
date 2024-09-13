@@ -28,7 +28,7 @@ html, body {
 body {
     color: #6a1818;
     font-family: 'Garamond', serif;
-    font-size: 16pt;
+    font-size: 13pt;
 
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
@@ -38,7 +38,6 @@ body {
 }
 
 h1 {
-    /*font-size: 20pt;*/
     margin-top: 10px;
     text-align: left;
     font-weight: 900;

@@ -5,15 +5,30 @@
         url("/assets/fonts/Inter_var.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Garamond";
+    src: url("/assets/fonts/EBGaramond08-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("/assets/fonts/EBGaramond08-Italic.ttf") format("truetype");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "GaramondSC";
+    src: url("/assets/fonts/EBGaramondSC08-Regular.ttf") format("truetype");
+}
+
 html, body {
     height: 100%;
 }
 
 body {
-    background-color: #628c57;
-    color: #5e1717;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    color: #6a1818;
+    font-family: 'Garamond', serif;
+    font-size: 13pt;
 
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
@@ -23,7 +38,6 @@ body {
 }
 
 h1 {
-    font-size: 20pt;
     margin-top: 10px;
     text-align: left;
     font-weight: 900;
@@ -33,11 +47,13 @@ h1.bigtitle {
     margin: auto;
     margin-bottom: 5px;
     text-align: center;
+    font-size: 30pt;
+    font-family: 'GaramondSC', serif;
 }
 
 h4 {
     margin: 0;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 div.nav {
@@ -65,7 +81,7 @@ div.sidebar li {
 }
 
 div.sidebar {
-    background: #f0edc2;
+    background-color: #bef1bd;
     overflow-x: hidden;
     height: fit-content;
 
@@ -74,14 +90,19 @@ div.sidebar {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 
-    flex: 0 0 300px;
+    flex: 0 0 350px;
 
-    border: 2px solid brown;
-    border-radius: 4px;
+    border: 1px solid green;
+
+    font-size: 13pt;
 }
 
 div.sidebar.hidden {
     display: none;
+}
+
+div.sidebar pre {
+    font-size: 11pt;
 }
 
 div.stickybox {
@@ -90,8 +111,8 @@ div.stickybox {
     width: fit-content;
     margin: auto;
     color: grey;
-    background-color: white;
     padding: 3px;
+    background-color: inherit;
 }
 
 div.stickybox.sticking {
@@ -116,13 +137,10 @@ button.sidebar_btn {
 
 div.content {
     flex: 1;
-    max-width: 1000px;
+    max-width: 900px;
     width: 60%;
     padding: 20px;
-    background-color: white;
     box-sizing: border-box;
-    border: 2px solid brown;
-    border-radius: 4px;
     height: fit-content;
 }
 
@@ -183,7 +201,7 @@ li.post_list:last-child {
 
 hr {
     border: none;
-    border-top: 1pt solid brown;
+    border-top: 1.5pt solid green;
 }
 
 p > img {
@@ -222,7 +240,7 @@ div.cardContainer {
 }
 
 div.card {
-    border: 2px solid #9aaab3;
+    /*border: 2px solid #9aaab3;*/
     background-color: #f1f9fd;
     padding: 15px;
     padding-top: 0;

@@ -1,3 +1,8 @@
- - Chess move generalisation
+ - Chess move generalisation, for chess game
  - Buddy allocator
  - Some teas I like
+ - Some recommendations for getting into OS development; off the top of my head, at least mention:
+   - Really good to start with writing via serial port -- what's the point in implementing a text mode driver early on?
+   - To implement bootloader or use an existing one?
+   - Which language to use? I always use C, but tbh probably not best
+ - Card game description -> implementation "compiler"

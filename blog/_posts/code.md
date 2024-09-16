@@ -1,0 +1,11 @@
+```
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      dhcp4: false
+      addresses:
+         - 192.168.56.5/24 #192.168.56.6/24 for the worker
+  version: 2
+```

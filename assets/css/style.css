@@ -81,7 +81,7 @@ div.sidebar li {
 }
 
 div.sidebar {
-    background-color: #bef1bd;
+    background-color: #fff3d5;
     overflow-x: hidden;
     height: fit-content;
 
@@ -201,7 +201,7 @@ li.post_list:last-child {
 
 hr {
     border: none;
-    border-top: 1.5pt solid green;
+    border-top: 1px solid #6a1818;
 }
 
 p > img {

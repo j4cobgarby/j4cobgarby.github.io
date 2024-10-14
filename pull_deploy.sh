@@ -3,4 +3,4 @@
 # html using jekyll. It then copies this to a place where Caddy will serve files
 # from.
 
-git pull && bundle exec jekyll build -d /var/www/html
+git pull && bundle exec jekyll build -d /var/www/html --trace

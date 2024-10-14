@@ -204,7 +204,11 @@ hr {
     border-top: 1px solid #6a1818;
 }
 
-p > img {
+figure {
+    text-align: center;
+}
+
+img {
     max-height: 400px;
     max-width: 80%;
     display: inline-block;

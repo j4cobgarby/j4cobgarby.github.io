@@ -4,3 +4,6 @@
 vendor
 .venv
 _site
+vendor
+.bundle
+gems

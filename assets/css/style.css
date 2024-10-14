@@ -105,6 +105,11 @@ div.sidebar pre {
     font-size: 11pt;
 }
 
+div.sidebar a {
+    /*color: #6a1818;*/
+    color: darkgreen;
+}
+
 div.stickybox {
     position: sticky;
     top: 0px;

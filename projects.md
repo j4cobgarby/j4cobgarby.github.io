@@ -10,7 +10,7 @@ Below is a mix of hackathon projects (that I've worked on in a team with friends
 Of course it goes without saying that everything is open source, and in most cases the titular link will take you either directly to the source, or to a Devpost page from which you can find a Github link.
 
 <div class="cardContainer">
-{% for card in site.categories['projects'] %}
+{% for card in site.projects %}
     {{ card }}
 {% endfor %}
 </div>

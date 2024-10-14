@@ -1,0 +1,10 @@
+plugins:
+  - jekyll-feed
+
+collections:
+  - projects
+
+feed:
+  posts_limit: 5
+  categories:
+    - blog

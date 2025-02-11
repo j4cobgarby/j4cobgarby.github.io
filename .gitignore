@@ -8,3 +8,6 @@ vendor
 .bundle
 gems
 Gemfile.lock
+
+# Big files
+assets/img/photography/*

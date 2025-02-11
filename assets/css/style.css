@@ -28,6 +28,7 @@ html, body {
 body {
     color: #6a1818;
     font-family: 'Garamond', serif;
+    /* font-family: sans-serif; */
     font-size: 13pt;
 
     background-position: 0 0, 6.5pt 6.5pt;

@@ -34,8 +34,8 @@ body {
     background-position: 0 0, 6.5pt 6.5pt;
     background-size: 13pt 13pt;
 
-    hyphens: auto;
-    text-align: left;
+    /*hyphens: auto;*/
+    text-align: justify;
 }
 
 h1 {
@@ -223,10 +223,9 @@ img {
 
 img.icon {
     float: left;
-    margin: 10px 10px 0 0;
-    width: 95px;
+    margin-right: 1em;
+    height: 4.5em;
     border: 1px solid brown;
-    border-radius: 5px;
 }
 
 /* uhhh, i think this was so that when there are three images in a row they
@@ -238,10 +237,6 @@ img + img, img:has(+ img) {
 img.cardbanner {
     margin-top: 10px;
     width: 100%;
-}
-
-p:has(> img) {
-    text-align: center;
 }
 
 div.cardContainer {

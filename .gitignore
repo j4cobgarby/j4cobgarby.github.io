@@ -10,4 +10,4 @@ gems
 Gemfile.lock
 
 # Big files
-assets/img/photography/*
+assets/img/photography

@@ -16,8 +16,11 @@ module Jekyll
     end
 
     def render(context)
+      Jekyll.logger.debug "Image name: ", @img_name
       thumb = @img_name.sub(/\.(\w+)$/, '_thumbnail.\1')
+      "#{thumb}"
       "[![](#{thumb})](#{@img_name})"
+      # "blahlkw lkjdalw "
     end
   end
 end

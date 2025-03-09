@@ -20,7 +20,6 @@ module Jekyll
       thumb = @img_name.sub(/\.(\w+)$/, '_thumbnail.\1')
       "#{thumb}"
       "[![](#{thumb})](#{@img_name})"
-      # "blahlkw lkjdalw "
     end
   end
 end

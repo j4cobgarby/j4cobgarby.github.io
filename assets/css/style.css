@@ -61,6 +61,7 @@ div.content {
     h1, h2, h3, h4, h5 {
         color: #e41717;
     }
+    line-height: 20pt;
 }
 
 h4 {

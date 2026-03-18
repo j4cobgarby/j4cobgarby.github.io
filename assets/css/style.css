@@ -1,48 +1,16 @@
-@font-face {
-    font-family: "Inter";
-    src:
-        Local("Inter"),
-        url("/assets/fonts/Inter_var.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Garamond";
-    src: url("/assets/fonts/EBGaramond08-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Garamond";
-    src: url("/assets/fonts/EBGaramond08-Italic.ttf") format("truetype");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "GaramondSC";
-    src: url("/assets/fonts/EBGaramondSC08-Regular.ttf") format("truetype");
-}
-
 html, body {
-    height: 100%;
-    background-color: #fffcf3;
+    background-color: black;
 }
 
 body {
-    color: #460b0b;
-    font-family: 'Garamond', serif;
-    /* font-family: sans-serif; */
-    font-size: 13.5pt;
-
-    background-position: 0 0, 6.5pt 6.5pt;
-    background-size: 13pt 13pt;
-
-    /*hyphens: auto;*/
-    text-align: justify;
+    color: lightblue;
+    font-family: sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
 }
 
 h1 {
     margin-top: 10px;
-    text-align: left;
-    font-weight: 900;
 }
 
 h1.bigtitle {
@@ -50,23 +18,16 @@ h1.bigtitle {
     margin-bottom: 5px;
     text-align: center;
     font-size: 30pt;
-    font-family: 'GaramondSC', serif;
-}
-
-div.sidebar {
-    color: #205105;
 }
 
 div.content {
     h1, h2, h3, h4, h5 {
-        color: #e41717;
+        color: red;
     }
-    line-height: 20pt;
 }
 
 h4 {
     margin: 0;
-    /*text-align: center;*/
 }
 
 div.nav {
@@ -82,11 +43,11 @@ div.nav {
 }
 
 a {
-    color: #297bff;
+    color: lightgreen;
 }
 
 a:hover {
-    color: #265aad;
+    color: white;
 }
 
 div.sidebar li {
@@ -94,8 +55,6 @@ div.sidebar li {
 }
 
 div.sidebar {
-    /*background-color: #fff3d5;*/
-    background-color: #ddf2cb;
     overflow-x: hidden;
     height: fit-content;
 
@@ -106,9 +65,7 @@ div.sidebar {
 
     flex: 0 0 350px;
 
-    border: 1px solid green;
-
-    font-size: 13pt;
+    font-style: italic;
 }
 
 div.sidebar.hidden {
@@ -117,11 +74,6 @@ div.sidebar.hidden {
 
 div.sidebar pre {
     font-size: 11pt;
-}
-
-div.sidebar a {
-    /*color: #6a1818;*/
-    color: darkgreen;
 }
 
 div.stickybox {
@@ -184,14 +136,13 @@ div.footer {
 
 pre.highlight {
     padding: 20px;
-    border-radius: 5px;
-    background-color: #faf9f2;
-    color: black;
+    background-color: #170000;
+    color: white;
     overflow-x: auto;
+    border: 1pt solid red;
 }
 
 code {
-    font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
 }
 
@@ -236,13 +187,6 @@ img {
     box-sizing: border-box;
 }
 
-img.icon {
-    float: left;
-    margin-right: 1em;
-    height: 4.5em;
-    border: 1px solid brown;
-}
-
 /* uhhh, i think this was so that when there are three images in a row they
  * go in one row? */
 img + img, img:has(+ img) {
@@ -261,8 +205,7 @@ div.cardContainer {
 }
 
 div.card {
-    /*border: 2px solid #9aaab3;*/
-    background-color: #f1f9fd;
+    border: 1px solid lightblue;
     padding: 15px;
     padding-top: 0;
     overflow-x: hidden;
@@ -277,7 +220,6 @@ div.card > h2, div.card > h3 {
  * show a minimal version of it at the top of the page instead */
 @media (max-width: 1000px) {
     body {
-        text-align: justify;
         margin: 4px;
     }
 
@@ -304,7 +246,6 @@ div.card > h2, div.card > h3 {
     div.sidebar li, div.sidebar ul {
       display: inline;
       padding: 5px;
-      line-height: 200%;
     }
 
     div.sidebar ul {

@@ -1,0 +1,138 @@
+---
+layout: default
+title: Licentiate Info
+---
+
+# Overview of My Licentiate Thesis
+
+## Optimising Deep Learning on Highly Parallel Processors with Relaxed Semantics
+
+### Contents
+
+ - [Paper A](#papera) -- Interval-Asynchrony
+ - [Paper B](#paperb) -- ForestTune
+
+### Introduction
+
+The impressive performance of modern artificial intelligence systems arises as a result of deep machine learning, which, after processing a set of training data, produces accurate and reliable AI models. These models have found endless applications, including financial forecasting, natural language processing, autonomous robotics, computer games, and, increasingly, language modelling for virtual assistants and coding assistance. **TODO: Finish this**
+
+<center>
+<hr/>
+<h1 id="papera">Paper A</h1>
+<h2>Interval-Asynchrony: Delimited Intervals of Localised Asynchrony for Fast Parallel SGD</h2>
+<span>Presented at Euro-Par 2025 <a href="https://link.springer.com/chapter/10.1007/978-3-031-99857-7_17">(Proceedings Link)</a></span>
+</center>
+
+The first paper in my thesis explores a novel approach to executing stochastic gradient descent (SGD) in a mostly asynchronous way (good for throughput), while efficiently bounding staleness to achieve fast convergence.
+
+<div class="cardContainer">
+    <div class="card">
+        <h2>Motivation</h2>
+        <p>
+        Parallelism is a popular approach to <b>scale SGD</b>, in which a large number of processing devices (think CPUs, GPUs, etc.) are orchestrated together to improve training throughput.
+        Traditionally, parallel SGD is formulated as a synchronous algorithm, but unfortunately that struggles due to significant <b>synchronisation overhead</b>.
+        </p><p>
+        For this reason, asynchronous implementations are increasingly common.
+        These provide an improvement in throughput at the expense of introducing <b>stale gradients</b> which reduce the effectiveness of individual SGD steps.
+        Previous approaches to mitigate the downsides of asynchronous processing include adaptively
+        adjusting the number of worker threads or the learning rate, but at their
+        core these are still fully asynchronous and hence still suffer from lower
+        accuracy due to frequent staleness.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Interval-Asynchrony</h2>
+        <p>
+        When executing SGD asynchronously (i.e. according to Hogwild! semantics), workers are free to update a shared set of model parameters at any time. This means that between the moment that a given worker pulls a copy of the parameters, and the moment that they finish calculating a gradient to update the model, the model may have been updated several times by other workers. The number of overlapping updates is called <i>staleness</i>.
+        </p>
+        <p>
+        In this work we analyse the origin of such staleness, and as a result propose <i>Interval-Asynchrony</i>, a <b>semi-asynchronous</b> method which
+        retains high throughput while reducing gradient staleness, both on average as well as with a hard upper bound.
+        </p><p>
+        To do so, we introduce periodic <b>asynchronous intervals</b>, within which SGD is executed asynchronously, but between which gradient computations may not cross.
+        The size of these intervals determines the degree of asynchrony, providing us with an adjustable scale.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Interval Size</h2>
+        <p>
+        It turns out that the optimal size of asynchronous intervals &mdash; the parameter that Interval-Asynchrony introduces &mdash; depends on the stage of execution. It tends to require smaller intervals later on, and can put up with larger intervals earlier for better throughput.
+        </p><p>
+        Unsurprisingly, it's not trivial to determine the interval size schedule beforehand. In the paper we propose two methods for adjusting it, and evaluate each:
+        <ul>
+            <li>Linear decay. Reduce interval size by a constant for every <i>n</i> accepted steps.</li>
+            <li>Probing. This method, inspired by <i>ElAsyncSGD</i>, periodically trials execution at nearby interval sizes and checks if any seem to work better at the current stage.</li>
+        </ul>
+        When dialled in, linear decay has the potential to outperform probing. However, we propose that probing is easier to apply to new, unknown workloads. This behaviour can be seen in figures 4 and 5 in the paper.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Artefacts &amp; Downloads</h2>
+        <p>
+        Here, you can find a recording from my presentation of this paper at Euro-Par 2025 in Dresden. You can also find a slightly more in-depth blog post about the paper and the conference <a href="http://127.0.0.1:4000/blog/2025/09/03/Euro-Par-2025.html">here!</a>
+        </p>
+        <center>
+        <iframe width="100%" height="240px" src="https://www.youtube.com/embed/RnzR7FxzWx8?si=j6N3mjfjr-Imf2ru&amp;start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+        <ul>
+            <li>Presentation slides (<a href="/assets/Europar2025.pdf">PDF</a>) (<a href="/assets/Europar2025.odp">ODP</a>)</li>
+            <li>Conference paper (<a href="/assets/pdf/int_async.pdf">PDF</a>)</li>
+            <li><a href="https://zenodo.org/records/15576941">C++ implementation</a></li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Evaluation</h2>
+        <p>
+        Our focus for this work is on CPU training for highly parallel systems. We therefore picked baseline algorithms and training workloads that are sensible for this setting.
+        </p> <p>
+        We compared against the following algorithms that control the execution:
+        <ul>
+            <li>Fully synchronous (traditional);</li>
+            <li>Fully asynchronous; and</li>
+            <li>ElAsyncSGD &mdash; fully asynchronous with dynamic number of threads.</li>
+        </ul>
+        And we considered both <span>CIFAR-10</span> and <span>CIFAR-100</span> datasets, for which we train a model to recognise what a given image is of.
+        </p><p>
+        I recommend reading section 5 of <a href="/assets/pdf/int_async.pdf">the paper</a> for an in-depth evaluation, but the takeaway numbers are:
+        <ul>
+            <li>Reduction in training time to same accuracy of up to 32%.</li>
+            <li>Solid scalability up to 128 threads.</li>
+            <li>Better final accuracy compared to asynchronous baselines, and competitive with fully synchronous (exact) method.</li>
+        </ul>
+        </p>
+    </div>
+    <div class="card">
+        <h2>Visualisation</h2>
+        <p>
+        To better explain how Interval-Asynchrony works, compared to synchronous and asynchronous, you can play around with the interactive visualisation below.
+        Experiment with each execution mode, and consider:
+        <ul>
+            <li>How do different interval sizes affect throughput and staleness?</li>
+            <li>What's the difference in staleness distribution between our method and asynchronous?</li>
+        </ul>
+        Simply press "Begin" to start.
+        </p>
+        <hr/>
+        <iframe id="simframe" src="/sgdvis.html" style="width:100%;height:620px;border:0" title="Interval-Asynchrony Visualisation" loading="lazy"></iframe>
+    </div>
+</div>
+
+
+<script>
+(function () {
+  const frame = document.getElementById('simframe');
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow) return;
+    if (e.data && e.data.type === 'ia-sim-height')
+      frame.style.height = e.data.height + 'px';
+  });
+})();
+</script>
+
+---
+
+<center>
+<h1 id="paperb">Paper B</h1>
+<h2>ForestTune: Resource-Aware Hyperparameter Schedule Discovery as a Tree Search</h2>
+<span>Submitted; under review.</span>
+</center>

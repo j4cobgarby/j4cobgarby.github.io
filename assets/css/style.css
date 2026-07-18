@@ -1,10 +1,11 @@
 html, body {
     /* background-color: #f2f5f9; */
-    background-color: #f0f0f0;
+    background-color: #a9d6fc;
 }
 
 body {
     font-family: sans-serif;
+    font-size: small;
 }
 
 h1 {
@@ -15,7 +16,6 @@ h1.bigtitle {
     margin: auto;
     margin-bottom: 5px;
     text-align: center;
-    /* font-size: 30pt; */
 }
 
 div.content {
@@ -185,7 +185,7 @@ img.cardbanner {
 
 div.cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
     gap: 15px;
 }
 

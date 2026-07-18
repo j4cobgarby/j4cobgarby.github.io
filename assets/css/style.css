@@ -47,6 +47,7 @@ div.sidebar {
     border-radius: 6px;
 
     text-align: justify;
+    hyphens: auto;
 }
 
 div.sidebar.hidden {
@@ -97,6 +98,7 @@ div.content {
 
     p {
         text-align: justify;
+        hyphens: auto;
     }
 }
 

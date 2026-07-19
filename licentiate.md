@@ -3,18 +3,29 @@ layout: default
 title: Licentiate Info
 ---
 
-# Overview of My Licentiate Thesis
 
-## Optimising Deep Learning on Highly Parallel Processors with Relaxed Semantics
+# Optimising Asynchronous Deep Learning on Highly Parallel Processors
+## Overview of My Licentiate Thesis
 
 ### Contents
 
+ - [Introduction](#introduction)
  - [Paper A](#papera) -- Interval-Asynchrony
  - [Paper B](#paperb) -- ForestTune
 
-### Introduction
+<center>
+<h1 id="introduction">Introduction</h1>
+</center>
 
-The impressive performance of modern artificial intelligence systems arises as a result of deep machine learning, which, after processing a set of training data, produces accurate and reliable AI models. These models have found endless applications, including financial forecasting, natural language processing, autonomous robotics, computer games, and, increasingly, language modelling for virtual assistants and coding assistance. **TODO: Finish this**
+The impressive performance of modern artificial intelligence systems arises as a result of deep machine learning, which, after processing a set of training data, produces accurate and reliable AI models. These models have found endless applications, including financial forecasting, natural language processing, autonomous robotics, computer games, and, increasingly, language modelling for virtual assistants and coding.
+
+As we imagine more and more complex use cases, we tend to as a result require tremendous quantities of data -- and similarly huge amounts of processing power -- to produce the models we want. If we wish to continue this progression, we either need models that are more efficient to train; significantly more powerful or scalable compute hardware; or more efficient training algorithms. In this thesis, we focus on the latter.
+
+For some time now, the performance of individual compute units has begun to plateau. In response, people with a need for high performance computing must investigate ways of orchestrating a number of individual processors together in a scalable way to increase the total processing power. This is what parallel processing is.
+
+Executing machine learning <i>efficiently</i> in parallel is not trivial, since as we introduce more and more processors to a system, we introduce significant overhead in the strict, consistent case. This is because all the processors need to synchronise with each other to produce an absolute correct result.
+
+We consider methods of relaxing this synchronisation. Executing training algorithms _asynchronously_ can greatly improve the speed at which data is processed, but if done carelessly can significantly harm the convergence rate and eventual model quality. We therefore explore different methods of controlling -- and taming -- this asynchrony.
 
 <center>
 <hr/>
@@ -49,9 +60,12 @@ The first paper in my thesis explores a novel approach to executing stochastic g
         <p>
         In this work we analyse the origin of such staleness, and as a result propose <i>Interval-Asynchrony</i>, a <b>semi-asynchronous</b> method which
         retains high throughput while reducing gradient staleness, both on average as well as with a hard upper bound.
-        </p><p>
-        To do so, we introduce periodic <b>asynchronous intervals</b>, within which SGD is executed asynchronously, but between which gradient computations may not cross.
-        The size of these intervals determines the degree of asynchrony, providing us with an adjustable scale.
+        </p>
+        <center>
+        <img src="/assets/img/interval-async-overview.png">
+        </center>
+        <p>
+        To do so, we introduce periodic <b>asynchronous intervals</b>, depicted above. Within one interval, SGD is executed asynchronously, gradient computations may not cross interval boundaries. An interval is defined by a number of accepted SGD steps. The size of these intervals determines the degree of asynchrony, providing us with an adjustable scale.
         </p>
     </div>
     <div class="card">
@@ -130,11 +144,12 @@ The first paper in my thesis explores a novel approach to executing stochastic g
 })();
 </script>
 
+<hr>
+
 <center>
 <h1 id="paperb">Paper B</h1>
 <h2>ForestTune: Resource-Aware Hyperparameter Schedule Discovery as a Tree Search</h2>
 <span>Submitted. Currently under review.</span><br>
-<b><a href="/assets/pdf/foresttune.pdf">Download the paper here!</a></b>
 </center>
 
 <p>

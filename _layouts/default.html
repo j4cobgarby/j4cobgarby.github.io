@@ -9,6 +9,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
+
+        {% if page.url == "/licinfo.html" %}
+        <meta name="robots" content="noindex, nofollow">
+        {% endif %}
             
         </script>
     </head>
@@ -35,7 +39,6 @@
                 <li><a href="/">Blog</a></li>
                 <li><a href="https://github.com/j4cobgarby/">Github&#x2B00;</a></li>
                 <!-- <li><a href="/research.html">Research</a></li> -->
-                <li><a href="/licentiate.html">Licentiate Thesis Overview</a></li>
                 <li>Hackathons:</li>
                 <ul>
                     <li><a href="/projects.html#hackathons">Projects</a></li>

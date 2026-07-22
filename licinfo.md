@@ -149,7 +149,8 @@ The first paper in my thesis explores a novel approach to executing stochastic g
 <center>
 <h1 id="paperb">Paper B</h1>
 <h2>ForestTune: Resource-Aware Hyperparameter Schedule Discovery as a Tree Search</h2>
-<span>Submitted. Currently under review.</span><br>
+<span style="color:red;">Currently under peer review. Please don't share.</span>
+<br><a href="/assets/pdf/foresttune_do_not_share.pdf">(Paper download)</a><br>
 </center>
 
 <p>
@@ -206,7 +207,7 @@ The second paper explores hyperparameter tuning considering that hyperparameters
     <li>Is <i>ForestTune</i> practical in terms of the memory and storage overhead? </li>
     </ul>
     <p>
-    In short, the answer to all the above questions is "yes". I'd recommend taking a look at the paper for a detailed evaluation, but for a taste, look at this plot:
+    In short, the answer to all the above questions is "yes". I'd recommend taking a look at <a href="/assets/pdf/foresttune_do_not_share.pdf">the paper</a> for a detailed evaluation, but for a taste, look at this plot:
     </p>
     <center>
     <img src="/assets/img/cifar_vs_time.png">

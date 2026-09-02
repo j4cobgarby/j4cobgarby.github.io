@@ -1,6 +1,7 @@
 html, body {
-    /* background-color: #f2f5f9; */
-    background-color: #a9d6fc;
+    background-color: #f2f5f9;
+    /* background-color: #a9d6fc; */
+    /* background-color: #eff0f7; */
 }
 
 body {
@@ -43,8 +44,8 @@ div.sidebar {
     flex: 0 0 350px;
     font-size: 10.5pt;
     background-color: white;
-    border: 3px solid #1964e5;
-    border-radius: 6px;
+    /* border: 3px solid #1964e5; */
+    /* border-radius: 6px; */
 
     text-align: justify;
     hyphens: auto;
@@ -192,7 +193,7 @@ div.cardContainer {
 }
 
 div.card {
-    border: 2px solid #1964e5;
+    border: 1px solid #1964e5;
     border-radius: 4px;
     padding: 15px;
     overflow-x: hidden;

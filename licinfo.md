@@ -149,7 +149,6 @@ The first paper in my thesis explores a novel approach to executing stochastic g
 <center>
 <h1 id="paperb">Paper B</h1>
 <h2>ForestTune: Resource-Aware Hyperparameter Schedule Discovery as a Tree Search</h2>
-<span style="color:red;">Currently under peer review. Please don't share.</span>
 <br><a href="/assets/pdf/foresttune_do_not_share.pdf">(Paper download)</a><br>
 </center>
 

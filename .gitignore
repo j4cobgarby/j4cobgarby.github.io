@@ -12,3 +12,5 @@ Gemfile.lock
 # Big files
 assets/img/photography/*
 !assets/img/photography/.gitkeep
+
+*~undo-tree~

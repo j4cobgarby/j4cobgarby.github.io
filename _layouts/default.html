@@ -1,64 +1,29 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Jacob Garby - {{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/assets/css/style.css">
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
-
-        {% if page.url == "/licinfo.html" %}
-        <meta name="robots" content="noindex, nofollow">
-        {% endif %}
-            
-        </script>
-    </head>
-
-    <body lang="en-GB">
-        <div class="container">
-        <div id="sidebar" class="sidebar">
-            <h1 class="bigtitle">Jacob Garby</h1>
-            <p>
-            Hello, welcome to my website!
-            I'm a PhD student at Chalmers University, Gothenburg, working in the <a href="https://www.cse.chalmers.se/research/group/dcs/">DCS research group&#x2B00;</a>. At the moment, I'm trying to design parallel algorithms for various types of data processing tasks (primarily machine learning) which can scale better while still gaining high throughput through asynchrony and <a href="https://blogs.qub.ac.uk/relax-dn/">relaxed&#x2B00;</a> semantics!
-            </p>
-            <p>
-            The point in this blog is to post about things that I'm working on that seem interesting. This will involve some computer stuff, and also some photography.
-            </p>
-
-	    <p style="text-align: center;">
-		<a style="margin-right: 20px;"href="mailto:j4cobgarby+fromblog@gmail.com">Email</a>
-		<a class="hide_on_mobile" href="/feed.xml">Atom Feed</a>
-	    </p>
-
-            <h4 class="hide_on_mobile">Links</h4>
-            <ul>
-                <li><a href="/">Blog</a></li>
-                <li><a href="https://github.com/j4cobgarby/">Github&#x2B00;</a></li>
-                <!-- <li><a href="/research.html">Research</a></li> -->
-                <li>Hackathons:</li>
-                <ul>
-                    <li><a href="/projects.html#hackathons">Projects</a></li>
-                    <li><a href="https://devpost.com/j4cobgarby">Devpost portfolio&#x2B00;</a></li>
-                </ul>
-                <li>Chess:</li>
-                <ul>
-                    <li><a href="https://lichess.org/@/j4cobgarby">Lichess Profile&#x2B00;</a></li>
-                    <li><a href="https://ratings.fide.com/profile/1786520">FIDE Profile&#x2B00;</a/></li>
-                </ul>
-            </ul>
-        </div>
-        <div class="content">
-        <div class="contentInner">
-            {{ content }}
-        </div>
-        <div class="footer">
-            <a href="#">&UpArrowBar;</a>
-        </div>
-        </div>
-        </div>
-    </body>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="top-bar">
+      <a href="{{ "/" | relative_url}}">about</a>
+      <a href="{{ "/listing" | relative_url}}">posts</a>
+      <a href="https://github.com/j4cobgarby/">github</a>
+      <a href="https://orcid.org/0009-0004-0981-5799">orcid</a>
+      <a href="https://lichess.org/@/j4cobgarby">lichess</a>
+      <a href="https://online-go.com/user/view/1389957">ogs</a>
+    </div>
+    <div class="content">
+      {{ content }}  
+    </div>
+    <div class="footer">
+      <p>Written by Jacob Garby, copyright &ge; 2026</p>
+    </div>
+  </body>
 </html>

@@ -1,15 +1,10 @@
+url: "https://jgarby.uk"
+baseurl: ""
+title: "Jacob Garby"
+author: "Jacob Garby"
+
 plugins:
   - jekyll-feed
 
-collections:
-  - projects
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - gems
+feed:
+  excerpt_only: true

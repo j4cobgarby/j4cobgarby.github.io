@@ -19,7 +19,9 @@ div.top-bar {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    align-content: flex-end;
     flex-wrap: wrap;
+    row-gap: 2px;
 
     a, span {
         padding: 0px 8px;
@@ -46,6 +48,10 @@ a:hover {
 
 div.content {
     padding: 0 32px;
+    @media screen and (max-width: 600px) {
+        padding: 0 5%;
+    }
+    
     margin: 0 auto;
     max-width: 1100px;
 
@@ -69,11 +75,13 @@ div.content {
 
     h1 {
         text-align: center;
+        text-decoration: underline;
     }
     
     h1, h2 {
         margin-bottom: 5px;
         clear: both;
+        line-height: 120%;
     }
     
     h3, h4, h5 {
@@ -101,6 +109,12 @@ div.content {
         margin: 10px;
         max-width: max(40%, 300px);
         width: fit-content;
+
+        @media screen and (max-width: 600px) {
+            max-width: 90%;
+            display: block;
+            margin: 10px auto;
+        }
         
         text-align: center;
         
@@ -138,20 +152,22 @@ div.content {
             max-height: unset;
         }
     }
-   
-    .left {
-        float: left;
-        clear: left;
-    }
 
-    .right {
-        float: right;
-        clear: right;
-    }
+    @media screen and (min-width: 600px) {
+        .left {
+            float: left;
+            clear: left;
+        }
 
-    .left, .right {
-        display: block;
-        margin: 10px 15px;
+        .right {
+            float: right;
+            clear: right;
+        }
+
+        .left, .right {
+            display: block;
+            margin: 10px 15px;
+        }
     }
 
     blockquote {

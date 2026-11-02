@@ -2,9 +2,10 @@
 layout: post
 author: Jacob Garby
 tags: code emacs
-render_with_liquid: false
 title: Converting an Emacs Theme to CSS for Jekyll
 ---
+
+{% raw %}
 
 > Tl;dr: I wrote an Emacs script to translate an Emacs theme into a CSS stylesheet that Jekyll syntax highlighting understands.
 > For your convenience, here are a few stylesheets that I generated in this way, which you can download and use in your own site:
@@ -141,3 +142,5 @@ And finally, the actual loop over face types! Just a couple of extra things to m
 ```
 
 And that's about it! Most of the time I tend to use `modus-operandi` in Emacs, so that's the one I'm using also for this site (at the moment, although it's not impossible that when you read this I'll have changed that).
+
+{% endraw %}

@@ -1,0 +1,77 @@
+.highlight {color: #ffffff;background-color: #000000;}
+.highlight .c,
+.highlight .ch,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs,
+.highlight .cpf
+{color: #989898;}
+.highlight .sd
+{color: #9ac8e0;}
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sh,
+.highlight .sx,
+.highlight .sa,
+.highlight .dl
+{color: #79a8ff;}
+.highlight .sr
+{}
+.highlight .se
+{}
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv,
+.highlight .ow
+{color: #b6a0ff;}
+.highlight .nb,
+.highlight .bp
+{color: #f78fe7;}
+.highlight .nf,
+.highlight .fm,
+.highlight .nt
+{color: #feacd0;}
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi
+{color: #00d3d0;}
+.highlight .na
+{color: #00d3d0;}
+.highlight .kt,
+.highlight .nc,
+.highlight .nn,
+.highlight .ne
+{color: #6ae4b9;}
+.highlight .no,
+.highlight .kc,
+.highlight .ss,
+.highlight .nl
+{color: #00bcff;}
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .mb,
+.highlight .il
+{color: #ffffff;}
+.highlight .cp,
+.highlight .nd
+{color: #ff7f86;}
+.highlight .err
+{color: #fec43f;}
+.highlight .gd
+{color: #ffbfbf;background-color: #4f1119;}
+.highlight .gi
+{color: #a0e0a0;background-color: #00381f;}
+.highlight .gh
+{}
+.highlight .gu
+{background-color: #303030;}

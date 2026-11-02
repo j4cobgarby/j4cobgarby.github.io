@@ -214,12 +214,11 @@ pre.highlight {
    
     font-size: large;
     line-height: 140%;
-    background-color: #fbfeff;
 
-    .c1, .cm, .c {
-        background-color: #fcf6ef;
-        color: #dd6102;
-    }
+    /* .c1, .cm, .c { */
+    /*     background-color: #fcf6ef; */
+    /*     color: #dd6102; */
+    /* } */
 }
 
 span.tag-name {

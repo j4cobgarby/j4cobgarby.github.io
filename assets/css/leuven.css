@@ -1,0 +1,77 @@
+.highlight {color: #333333;background-color: #FFFFFF;}
+.highlight .c,
+.highlight .ch,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs,
+.highlight .cpf
+{color: #8D8D84;font-style: italic;}
+.highlight .sd
+{color: #036A07;}
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sh,
+.highlight .sx,
+.highlight .sa,
+.highlight .dl
+{color: #008000;}
+.highlight .sr
+{}
+.highlight .se
+{}
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv,
+.highlight .ow
+{color: #0000FF;font-weight: bold;}
+.highlight .nb,
+.highlight .bp
+{color: #006FE0;}
+.highlight .nf,
+.highlight .fm,
+.highlight .nt
+{color: #006699;}
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi
+{color: #BA36A5;}
+.highlight .na
+{}
+.highlight .kt,
+.highlight .nc,
+.highlight .nn,
+.highlight .ne
+{color: #6434A3;}
+.highlight .no,
+.highlight .kc,
+.highlight .ss,
+.highlight .nl
+{color: #D0372D;}
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .mb,
+.highlight .il
+{}
+.highlight .cp,
+.highlight .nd
+{color: #808080;}
+.highlight .err
+{color: red;font-weight: bold;}
+.highlight .gd
+{background-color: #FEE8E9;}
+.highlight .gi
+{background-color: #DDFFDD;}
+.highlight .gh
+{color: #800000;background-color: #FFFFAF;font-weight: bold;}
+.highlight .gu
+{color: #990099;background-color: #FFEEFF;}
